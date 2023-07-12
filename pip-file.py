@@ -27,8 +27,9 @@ packages = output.splitlines()
 # BETTER search via string or re ?
 # BETTER case insensitive ?
 
-# BETTER change to input
-search_string = 'level'
+# TODO change to input
+#search_string = 'level'
+search_string = 'AutoHotkey'
 
 # TODO
 def search_string_in_package_files(search_string, package):
@@ -100,7 +101,7 @@ def search_string_in_package_files(search_string, package):
     is_first_match = True
     for filename in filenames:
         try:
-            match_index = filename.index('level')
+            match_index = filename.index(search_string)
         except ValueError as e:
             # search_string IS NOT found in current filename
             pass
